@@ -1,0 +1,114 @@
+{
+  "app-theme": "THEME_1",
+  "logo-url": "http://www.dummy-image-url.com/1.png",
+  "screens": [
+    {
+      "id": "1",
+      "heading-text": "LOB SELECTION",
+      "is_main": true,
+      "widgets": [
+        {
+          "id": "2",
+          "type": "BUTTON",
+          "ui-meta": {
+            "text": "BILL COLLECTION",
+            "labels": [
+              "BILL_COLLECT"
+            ]
+          },
+          "targets": [
+            {
+              "target": "SCREEN_2",
+              "key": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "heading-text": "BILL COLLECTION",
+      "is_main": false,
+      "widgets": [
+        {
+          "id": "accountNo",
+          "type": "LABEL-INPUT",
+          "ui-meta": {
+            "label-text": "Account No.",
+            "input-hint": "Enter 10 digit number",
+            "input-constraints": {
+              "input-type": "number/date/string/custom-formula/custom-regX",
+              "minLen": 10,
+              "custom-constraint": null,
+              "maxLen": 10
+            }
+          },
+          "targets": [
+            {
+              "target": "API_FETCH",
+              "key": "accountNo"
+            },
+            {
+              "target": "api:transaction-card",
+              "key": "accountNo"
+            }
+          ]
+        },
+        {
+          "id": "fetchInfo",
+          "type": "BUTTON",
+          "ui-meta": {
+            "text": "Fetch Info",
+            "labels": null
+          },
+          "targets": [
+            {
+              "target": "API_FETCH:SCREEN_DISPLAY",
+              "key": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DISPLAY",
+      "heading-text": null,
+      "is_main": false,
+      "widgets": [
+        {
+          "id": "accountNo",
+          "type": "LABEL-LABEL",
+          "ui-meta": {
+            "text-left": "Account Number",
+            "text-right": "~API_FETCH.accountNo~"
+          },
+          "target": null
+        },
+        {
+          "id": "mobileNo",
+          "type": "LABEL-LABEL",
+          "ui-meta": {
+            "text-left": "Mobile Number",
+            "text-right": "1234567890"
+          },
+          "target": null
+        },
+        {
+          "id": "description",
+          "type": "LABEL-LABEL",
+          "ui-meta": {
+            "text-left": "Description",
+            "text-right": "This is the description in the response JSON"
+          },
+          "target": null
+        },
+        {
+          "id": "paymentButtons",
+          "type": "PAYMENT_BUTTONS",
+          "ui-meta": null,
+          "target": null
+        }
+      ]
+    }
+  ]
+}

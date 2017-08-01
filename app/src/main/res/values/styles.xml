@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme1. -->
+    <style name="AppTheme1" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#333</item>
+        <item name="colorPrimaryDark">#523</item>
+        <item name="colorAccent">#1A5</item>
+    </style>
+    <!-- Base application theme2. -->
+    <style name="AppTheme2" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+    <!-- Base application theme3. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="TextTinyBlack" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:labelTextSize">@dimen/text_tiny</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextNormalBlack" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:labelTextSize">@dimen/text_tiny</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

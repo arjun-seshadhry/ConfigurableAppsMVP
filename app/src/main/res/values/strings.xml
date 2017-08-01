@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ConfigurableAppsMVP</string>
+    <string name="widget_button_text">Button</string>
+    <string name="widget_payment_button_text">Pay</string>
+    <string name="widget_labelpair_left_label_text">Label</string>
+    <string name="widget_labelpair_right_label_text">Value</string>
+    <string name="widget_labelinput_label_text">Label</string>
+    <string name="widget_labelinput_input_hint">Value</string>
+    <string name="widget_not_supported_text">Widget type not supported.</string>
+</resources>
